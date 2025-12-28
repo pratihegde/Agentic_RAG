@@ -2,7 +2,7 @@
 name = "rag-agentic-system"
 version = "0.1.0"
 description = "RAG system with LangGraph agentic workflow for Anervea.ai"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.11"
 dependencies = [
     "langchain>=0.1.0",
     "langgraph>=0.0.20",
@@ -24,6 +24,9 @@ dependencies = [
     "replicate>=0.23.1",
     "pymupdf>=1.23.8",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
 
 [build-system]
 requires = ["hatchling"]
