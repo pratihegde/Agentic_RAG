@@ -119,6 +119,13 @@ Every conversation can be exported as a professional Markdown log, including all
 
 ---
 
+### 📄 Sample Data & Transcripts
+To help you get started, I've included:
+- **`data/sample/example_chat_interaction.md`**: A full transcript of the 4-agent workflow in action, including Agentic Traces.
+- **`data/sample/scanned_ml_doc.pdf`**: A perfect sample for testing both text extraction and OCR.
+
+---
+
 ## 📁 System Structure
 ```text
 ├── src/
