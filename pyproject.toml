@@ -1,0 +1,33 @@
+[project]
+name = "rag-agentic-system"
+version = "0.1.0"
+description = "RAG system with LangGraph agentic workflow for Anervea.ai"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.1.0",
+    "langgraph>=0.0.20",
+    "langchain-openai>=0.0.5",
+    "langchain-google-genai>=0.0.6",
+    "chromadb>=0.4.22",
+    "pypdf>=3.17.4",
+    "PyPDF2>=3.0.1",
+    "pytesseract>=0.3.10",
+    "pdf2image>=1.16.3",
+    "Pillow>=10.2.0",
+    "sentence-transformers>=2.3.1",
+    "openai>=1.10.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.5.3",
+    "pydantic-settings>=2.1.0",
+    "streamlit>=1.30.0",
+    "pytest>=7.4.4",
+    "loguru>=0.7.2",
+    "transformers>=4.36.0",
+    "torch>=2.1.0",
+    "langchain-experimental>=0.0.47",
+    "tiktoken>=0.5.2",
+    "requests>=2.31.0",
+    "gradio_client>=0.8.0",
+    "replicate>=0.23.1",
+    "pymupdf>=1.23.8",
+]
