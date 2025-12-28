@@ -12,7 +12,6 @@ This system goes beyond basic RAG by treating document interaction as a conversa
 - **🧠 4-Agent "Brain"**: Specialized agents for Retrieval, Generation, Validation, and Final Formatting.
 - **🖼️ Native Image Support**: Direct ingestion of PNG/JPG files via **DeepSeek-OCR**.
 - **⚙️ Agentic Trace**: Real-time visibility into the agent's thinking process (Routing, Internal Queries, Retrieved Chunks).
-- **🔴 Ingestion Control**: Interrupt long-running OCR tasks with "Cancel Ingestion".
 
 ---
 
