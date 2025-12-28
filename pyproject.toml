@@ -5,6 +5,7 @@ description = "RAG system with LangGraph agentic workflow for Anervea.ai"
 requires-python = ">=3.11"
 dependencies = [
     "langchain>=0.1.0",
+    "langchain-core",
     "langgraph>=0.0.20",
     "langchain-openai>=0.0.5",
     "chromadb>=0.4.22",
