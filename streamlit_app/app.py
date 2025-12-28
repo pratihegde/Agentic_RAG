@@ -1,6 +1,7 @@
 """Streamlit web application for RAG system."""
 import streamlit as st
 import sys
+import os
 from pathlib import Path
 from datetime import datetime
 import tempfile
