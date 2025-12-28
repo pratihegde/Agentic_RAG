@@ -22,23 +22,23 @@ This system goes beyond basic RAG by treating document interaction as a conversa
 ### High-Level Flow
 ```mermaid
 graph TD
-    A[PDF/Image Upload] --> B{File Type?}
-    B -- PDF --> C[PyMuPDF (Fast Extraction)]
-    B -- Image --> D[DeepSeek-OCR (Replicate)]
-    C --> E[DeepSeek-OCR (if scanned)]
-    D --> F[Semantic Chunking]
+    A["PDF/Image Upload"] --> B{"File Type?"}
+    B -- "PDF" --> C["PyMuPDF (Fast Extraction)"]
+    B -- "Image" --> D["DeepSeek-OCR (Replicate)"]
+    C --> E["DeepSeek-OCR (if scanned)"]
+    D --> F["Semantic Chunking"]
     E --> F
-    F --> G[ChromaDB Vector Index]
+    F --> G["ChromaDB Vector Index"]
 
-    User[User query] --> H[Agentic Workflow]
-    H --> I[🧠 Smart Retriever]
-    I --> J{Intent?}
-    J -- Retrieval --> K[Generator Agent]
-    K --> L[Validator Agent]
-    L -- Valid --> M[Final Response Agent]
-    L -- Invalid --> K[Self-Correction Loop]
-    J -- Conversational --> M
-    M --> Output[Final Answer + Agentic Trace]
+    User["User query"] --> H["Agentic Workflow"]
+    H --> I["🧠 Smart Retriever"]
+    I --> J{"Intent?"}
+    J -- "Retrieval" --> K["Generator Agent"]
+    K --> L["Validator Agent"]
+    L -- "Valid" --> M["Final Response Agent"]
+    L -- "Invalid" --> K["Self-Correction Loop"]
+    J -- "Conversational" --> M
+    M --> Output["Final Answer + Agentic Trace"]
 ```
 
 ### The 4-Agent Team
