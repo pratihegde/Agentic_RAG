@@ -201,7 +201,7 @@ def ingest_document(uploaded_file):
             text = ocr_engine.extract_text_from_image(tmp_path)
             progress_bar.progress(60)
 
-        # Step 2: Chunking & Indexing
+        # Cleanup and return
         if not check_cancel() and text:
             status_text.text("Semantic Chunking...")
             chunks = text_processor.process(text)
@@ -213,17 +213,19 @@ def ingest_document(uploaded_file):
                 st.session_state.vector_store.add_documents(chunks, metadatas)
                 progress_bar.progress(100)
                 status_text.text("✅ Content Ingested!")
-                cancel_placeholder.empty()
                 return True, len(chunks)
         
-        # Cleanup
-        Path(tmp_path).unlink()
-        cancel_placeholder.empty()
         return False, 0
         
     except Exception as e:
         st.error(f"Error during ingestion: {e}")
         return False, 0
+    finally:
+        # Guarantee cleanup of temporary file
+        if 'tmp_path' in locals() and Path(tmp_path).exists():
+            Path(tmp_path).unlink()
+        if 'cancel_placeholder' in locals():
+            cancel_placeholder.empty()
 
 
 def main():
