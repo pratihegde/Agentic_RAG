@@ -97,6 +97,24 @@ uv run streamlit run streamlit_app/app.py
 
 ---
 
+## ☁️ Streamlit Cloud Deployment
+
+This project is configured for easy deployment on **Streamlit Cloud**.
+
+### Steps:
+1.  **Repository**: Push your code to a public GitHub repository.
+2.  **Packages**: Ensure `packages.txt` (included) and `requirements.txt` (included) are in the root.
+3.  **Secrets**: In Streamlit Cloud settings, go to **Secrets** and add your keys:
+    ```toml
+    OPENAI_API_KEY = "sk-..."
+    REPLICATE_API_TOKEN = "r8_..."
+    ```
+
+> [!NOTE]
+> The heavy dependencies (`torch`, `transformers`) have been removed in the cloud-optimized branch to ensure the app stays within the 1GB memory limit.
+
+---
+
 ## 🚀 Key Features Walkthrough
 
 ### 🔎 Agentic Trace
