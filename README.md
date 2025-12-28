@@ -1,4 +1,4 @@
-# 🤖 Premium Agentic RAG Workflow
+# 🤖 Agentic RAG Workflow
 
 A production-ready, high-performance Retrieval-Augmented Generation (RAG) system powered by a **4-Agent LangGraph workflow**. This system features intelligent query rewriting, agentic routing, and self-correcting validation to deliver grounded, high-fidelity answers.
 
@@ -10,7 +10,6 @@ This system goes beyond basic RAG by treating document interaction as a conversa
 
 ### 🌟 Key Innovations
 - **🧠 4-Agent "Brain"**: Specialized agents for Retrieval, Generation, Validation, and Final Formatting.
-- **⚡ Zero-Latency Response**: Optimized final agent using native Python for instant metadata formatting.
 - **🖼️ Native Image Support**: Direct ingestion of PNG/JPG files via **DeepSeek-OCR**.
 - **⚙️ Agentic Trace**: Real-time visibility into the agent's thinking process (Routing, Internal Queries, Retrieved Chunks).
 - **🔴 Ingestion Control**: Interrupt long-running OCR tasks with "Cancel Ingestion".
